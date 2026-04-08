@@ -15,7 +15,7 @@
 > [✨臻享阅读](BetterExperience.md)
 
 
-## 获取书源、订阅源
+## 获取书源
 - [Legado | 开源阅读 | 频道](https://t.me/legado_channels)
 - [源仓库](https://www.yckceo.com/yuedu/shuyuan/index.html)
 - [三千书源 | Yiove 书源仓库](https://shuyuan.yiove.com)
@@ -38,18 +38,46 @@
 | 📃 Pixiv 目录规则 | [一键导入](https://loyc.xyz/b/cdx.html?src=legado://import/textTocRule?src=https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/pixivToc.json) | [一键导入](https://loyc.xyz/b/cdx.html?src=legado://import/textTocRule?src=https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixivToc.json) |
 
 
+<details><summary><strong> 🚀 一键导入　详细操作 </strong></summary>
+
+#### 1.点击上述链接，跳转阅读
+![img](./pic/OpenInLegado.png)
+
+#### 2.导入并启用书源
+![img](./pic/InportBookSourcePixiv.jpg)
+</details>
+
+
+<details><summary><strong> ⚙️ 一键导入　网站设置 </strong></summary>
+
+> [!NOTE]
+> 官方API：https://github.com/gedoor/legado#api-
+```
+可通过url唤起阅读进行一键导入,url格式: legado://import/{path}?src={url}
+path类型: bookSource,rssSource,replaceRule,textTocRule,httpTTS,theme,readConfig,addToBookshelf
+path类型解释: 书源,订阅源,替换规则,本地txt小说目录规则,在线朗读引擎,主题,阅读排版,添加到书架
+legado://import/addToBookshelf?src={url}
+```
+
+一键导入链接如下：
+- `yuedu://booksource/importonline?src=https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json`
+- `legado://import/bookSource?src=https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json`
+
+</details>
+
+
 ### 🔗 B.规则订阅【易更新】 {#Subscription}
 > [!NOTE]
 >
-> 阅读 Sigma 支持自动 **通过订阅规则** 更新书源
+> 阅读 Plus 支持自动 **通过订阅规则** 更新书源
 > 
 >　**订阅 - 规则订阅 - 添加 - 复制链接、粘贴 - 添加订阅**
 
 | 源名称 | jsDelivr | Github |
 | ----- | -------- | ------ |
-| 🅿️ Pixiv 书源   | [书源链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/pixiv.json) | [书源链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json) |
-| 🦊 Linpx 书源   | [书源链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/linpx.json)  | [书源链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/linpx.json) |
-| 🐲 BTSRK 订阅源 | [书源链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/btsrk.json)  | [书源链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/btsrk.json) |
+| 🅿️ Pixiv 书源   | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/pixiv.json) | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json) |
+| 🦊 Linpx 书源   | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/linpx.json) | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/linpx.json) |
+| 🐲 BTSRK 订阅源 | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/btsrk.json) | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/btsrk.json) |
 
 
 <details><summary><strong> 🔗 规则订阅　详细操作 </strong></summary>
@@ -85,90 +113,29 @@
 #### 3. 粘贴书源链接，点击确定
 ![img](./pic/ImportOnlineBookSource3.jpg)
 
-#### 4. 导入完成并启用书源
+#### 4. 导入并启用书源
 **如果导入失败，请开启代理，或过段时间重试**
 
 ![img](./pic/InportBookSourcePixiv.jpg)
 </details>
 
 
-<details><summary><strong> ➕ 更多方法</strong></summary>
+<details><summary><strong> 📄 文件导入　详细操作</strong></summary>
 
-请【**开启代理**】后，复制下面的【书源】链接
-```
-https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json
-```
-```
-https://raw.githubusercontent.com/DowneyRem/PixivSource/main/linpx.json
-```
-
-或使用以下链接：
-```
-https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/pixiv.json
-```
-```
-https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/linpx.json
-```
-
-以下导入方法任选其一亦可
-<details><summary><strong> A. 文件导入</strong></summary>
-
-### 📄 A.文件导入更简单
+### 📑 D.文件导入
 #### 1.下载书源/订阅源文件
-Chrome 等浏览器可以打开 [这个网址](https://github.com/DowneyRem/PixivSource) ，选择 **链接另存为** 或 **下载链接**，下载相应书源
+打开 [此处的书源链接](#Subscription) ，选择 **链接另存为**，下载相应书源
 
+或打开 [Github Release](https://github.com/DowneyRem/PixivSource/releases/latest)，下载相应书源
 
 #### 2.使用阅读打开
-点击书源，选择用阅读打开
+点击书源文件，打开方式选择：阅读
 
 ![img](./pic/OpenInLegado.png)
 
-
-#### 3.导入完成并启用书源/订阅源
+#### 3.导入并启用书源/订阅源
 ![img](./pic/InportBookSourcePixiv.jpg)
 </details>
-
-
-<details><summary><strong> D. 一键导入</strong></summary>
-
-### ⏺️ D.一键导入最方便
-大多点击链接一键导入书源/订阅源，都是是采用了这种方式，如：**[喵公子书源管理](http://yuedu.miaogongzi.net/gx.html)**
-
-#### 0.【书源提供方】为按钮等添加链接
-大多一键导入书源/订阅源，都是采用了这种方式
-> ```
-> 可通过url唤起阅读进行一键导入,url格式: legado://import/{path}?src={url}
-> path类型: bookSource,rssSource,replaceRule,textTocRule,httpTTS,theme,readConfig,addToBookshelf
-> path类型解释: 书源,订阅源,替换规则,本地txt小说目录规则,在线朗读引擎,主题,阅读排版,添加到书架
-> legado://import/addToBookshelf?src={url}
-> ```
-> 自官方API：https://github.com/gedoor/legado#api-
-
-
-导入 Pixiv 书源的连接如下：
-```
-yuedu://booksource/importonline?src=https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json
-```
-```
-legado://import/bookSource?src=https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json
-```
-
-#### 1.手机浏览器内点击链接，跳转阅读
-浏览器打开：**[喵公子书源管理](http://yuedu.miaogongzi.net/gx.html)**
-
-一键导入按钮的链接，即为下面这条链接：
-```
-yuedu://booksource/importonline?src=https://cdn05042023.gitlink.org.cn/api/v1/repos/yi-c/yd/raw/sy.json?ref=master&access_token=92edf695d430562349cbfac4009fda6ad36817dd
-```
-
-点击链接，跳转阅读
-![img](./pic/OpenInLegado.png)
-
-#### 2.导入完成并启用书源
-![img](./pic/InportBookSourcePixiv.jpg)
-</details>
-</details>
-
 
 
 ## 书源配置 {#BookSourceSet}

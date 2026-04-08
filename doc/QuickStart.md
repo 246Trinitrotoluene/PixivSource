@@ -61,7 +61,7 @@ head:
 
 | 阅读版本 | 推荐 | 版本号 |
 | ------ | --- | ----- |
-| 👍【推荐】[阅读 Sigma](https://github.com/Luoyacheng/legado/releases) | Plus  | 3.25.0927 |
+| 👍【推荐】[阅读 Plus](https://github.com/Luoyacheng/legado/releases) | Plus  | 3.25.0927 |
 | 🏛️【官方】[阅读 Beta](https://miaogongzi.lanzout.com/b01rgkhhe)  | 新共存  | 3.25.0527 |
 </details>
 
@@ -71,7 +71,7 @@ head:
 
 | 阅读版本 | 推荐 | 版本号 |
 | ------ | --- | ----- |
-| 👍【推荐】[阅读 Sigma](https://github.com/Luoyacheng/legado/releases) | Plus  | 3.25.0927 |
+| 👍【推荐】[阅读 Plus](https://github.com/Luoyacheng/legado/releases) | Plus  | 3.25.0927 |
 | 🏛️【官方】[阅读 Beta](https://miaogongzi.lanzout.com/b01rgkhhe)  | 新共存  | 3.25.0527 |
 | 🎀【兼容】[阅读 MD3](https://github.com/HapeLee/legado-with-MD3/releases) | | 3.26     | 
 | 🍎【兼容】[源阅](https://github.com/kaich/SourceReadSite)      | TestFlight | 1.0 (112) |
@@ -110,29 +110,39 @@ head:
 | 📃 Pixiv 目录规则 | [一键导入](https://loyc.xyz/b/cdx.html?src=legado://import/textTocRule?src=https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/pixivToc.json) | [一键导入](https://loyc.xyz/b/cdx.html?src=legado://import/textTocRule?src=https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixivToc.json) |
 
 
+<details><summary><strong> 🚀 一键导入　详细操作 </strong></summary>
+
+#### 1.点击上述链接，跳转阅读
+![img](./pic/OpenInLegado.png)
+
+#### 2.导入并启用书源
+![img](./pic/InportBookSourcePixiv.jpg)
+</details>
+
+
+
 ### 🔗 B.规则订阅【易更新】 {#Subscription}
 > [!NOTE]
 >
-> 阅读 Sigma 支持自动 **通过订阅规则** 更新书源
+> 阅读 Plus 支持自动 **通过订阅规则** 更新书源
 >
 >　**订阅 - 规则订阅 - 添加 - 复制链接、粘贴 - 添加订阅**
+
 
 | 源名称 | jsDelivr | Github |
 | ----- | -------- | ------ |
 | 🅿️ Pixiv 书源   | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/pixiv.json) | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/pixiv.json) |
-| 🦊 Linpx 书源   | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/linpx.json)  | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/linpx.json) |
-| 🐲 BTSRK 订阅源 | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/btsrk.json)  | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/btsrk.json) |
+| 🦊 Linpx 书源   | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/linpx.json) | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/linpx.json) |
+| 🐲 BTSRK 订阅源 | [订阅链接](https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/btsrk.json) | [订阅链接](https://raw.githubusercontent.com/DowneyRem/PixivSource/main/btsrk.json) |
 
 
-<details><summary><strong> 详见：规则订阅 </strong></summary>
+<details><summary><strong> 🔗 规则订阅　详细操作 </strong></summary>
 
 #### 1. 打开【订阅】页面，点击【规则订阅】
 ![img](./pic/SubscribeEntry.png)
 
-
 #### 2. 点击加号，粘贴链接，保存订阅
 ![img](./pic/SubscribeBoookSourcePixiv.jpg)
-
 
 #### 3. 点击相应订阅规则，导入并启用/更新书源
 ![img](./pic/SubscribeHomePage.jpg)
@@ -143,6 +153,7 @@ head:
 
 **导入之后，再次点击则会检查更新**
 </details>
+
 
 
 ## 书源配置 {#BookSourceSet}
