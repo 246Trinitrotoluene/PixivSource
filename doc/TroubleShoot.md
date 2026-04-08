@@ -15,7 +15,22 @@
 > [✨臻享阅读](BetterExperience.md)
 
 
-## 故障排查与处理
+## 调试书源
+### 🐞 调试书源 {#Debug}
+我的 - 书源管理 - 编辑书源 - 调试 - 输入内容
+
+| 调试区域 | 输入内容 |
+|--------|---------|
+| 搜索 | 搜索相应关键词 |
+| 发现 | `::https://www.pixiv.net/ajax/top/novel` |
+| 详情 | `https://www.pixiv.net/novel/show.php?id=123` |
+| 目录 | `++https://www.pixiv.net/novel/show.php?id=123` |
+| 正文 | `--https://www.pixiv.net/novel/show.php?id=123` |
+
+- 提交错误时，最好附加其调试信息
+
+
+## 故障处理
 ### 🖼 图片显示为链接
 1. **关闭替换净化**
    ![img](./pic/ReplaceTurnOff.png)
@@ -24,6 +39,7 @@
 
 ## 故障排查
 ### 🈚️ 搜索、发现没有结果
+0. [调试书源](#Debug) 
 1. 检查网络是否可用 
    - 检查**网络**是否可用？更换其他网络重试
    - 检查**代理**是否可用？更换其他代理重试
@@ -39,5 +55,5 @@
    - 检查书源所用网站能否访问？
    - 检查书源所用网站功能能否正常？
    - **阅读内部登陆该网站**，重试
-5. 向书源开发者反馈
+5. [向书源开发者反馈](https://github.com/DowneyRem/PixivSource/issues) 
 
