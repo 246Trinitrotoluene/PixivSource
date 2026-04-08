@@ -76,9 +76,10 @@ friendGroups:
 <img width="150" height="150" src="./pic/BookSourcePixiv.png" alt="Pixiv BookSource"/>
 <br>
 
-# 友情链接
+# 🤝 友情链接 🤝
 </div>
 <FriendLink />
+
 
 ### 🏠 本站信息
 ```yaml
@@ -93,6 +94,7 @@ friendGroups:
 > 目前仅接受 **开源阅读相关资源站点** 添加友情链接
 > 
 > 请仿照上方内容，填写信息，发送至下方至评论区
+
 
 ```yaml
 - name: 

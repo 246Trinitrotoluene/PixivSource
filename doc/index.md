@@ -14,7 +14,7 @@ head:
       content: Pixiv 书源 - 开源阅读 Legado 的 Pixiv 小说书源
   - - meta
     - property: og:description
-      content: 用开源阅读 Legado App，像看网文一样阅读 Pixiv 小说。支持搜索、收藏、追更、插图与评论，直连无需代理。
+      content: 用开源阅读 Legado App，像看网文一样阅读 Pixiv 小说。支持搜索、收藏、追更、评论，直连无需代理。
   - - meta
     - property: og:image
       content: https://pixivsource.pages.dev/favicon-180x180.png
@@ -26,7 +26,7 @@ head:
       content: Pixiv 书源 - 开源阅读 Legado 的 Pixiv 小说书源
   - - meta
     - name: twitter:description
-      content: 用开源阅读 Legado App，像看网文一样阅读 Pixiv 小说。支持搜索、收藏、追更、插图与评论，直连无需代理。
+      content: 用开源阅读 Legado App，像看网文一样阅读 Pixiv 小说。支持搜索、收藏、追更、评论，直连无需代理。
 
 
 hero:
@@ -67,7 +67,7 @@ hero:
       link: Linpx
       
     - theme: brand
-      text: 🚀 导入 相关订阅源
+      text: 🚀 导入 订阅源
       link: "legado://import/importonline?src=https://cdn.jsdelivr.net/gh/DowneyRem/PixivSource@main/btsrk.json"
       
     - theme: alt
