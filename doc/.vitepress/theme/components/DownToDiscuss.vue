@@ -12,42 +12,50 @@ const props = defineProps({
 const showDiscuss = ref(false);
 
 /**
- * 核心优化：持续平滑滚动到底部
- * 这种方法可以确保在极长页面下也能一直滚动，直到触达目标或页面尽头
+ * 核心逻辑：双段滚动
+ * 1. 如果当前不在评论区，滚到评论区顶部（触发加载）
+ * 2. 如果已在评论区，滚到页面最底部（直达输入框）
  */
 const scrollToComments = () => {
     const el = document.getElementById(props.targetId);
-    // 获取目标位置，如果找不到目标则以文档底部为准
-    const targetPosition = el
-        ? el.getBoundingClientRect().top + window.scrollY - 20
-        : document.documentElement.scrollHeight;
+    const totalHeight = document.documentElement.scrollHeight;
 
-    // 使用原生平滑滚动
+    if (!el) {
+        window.scrollTo({ top: totalHeight, behavior: "smooth" });
+        return;
+    }
+
+    const scrollTop = window.scrollY;
+    const targetRect = el.getBoundingClientRect();
+    const targetTop = targetRect.top + scrollTop - 20;
+
+    // 判断逻辑：当前是否已经接近评论区顶部
+    const isAlreadyAtComments = Math.abs(scrollTop - targetTop) < 100;
+
+    // 决定滚动终点
+    const finalTarget = isAlreadyAtComments ? totalHeight : targetTop;
+
     window.scrollTo({
-        top: targetPosition,
+        top: finalTarget,
         behavior: "smooth"
     });
 
-    /** * 针对部分浏览器对 smooth 滚动距离限制的补丁：
-     * 如果页面实在太长（例如超过 10000px），单次 smooth 可能停在中途。
-     * 我们可以监听一次滚动停止，如果没到位再补一次。
+    /**
+     * 补丁：针对 Giscus 异步加载高度变化的修正
      */
     const checkScrollEnd = () => {
         const currentPos = window.scrollY + window.innerHeight;
-        const totalHeight = document.documentElement.scrollHeight;
-
-        // 如果还没到目标附近，且还没撞到页面底部，则再次触发
-        if (Math.abs(window.scrollY - targetPosition) > 100 && currentPos < totalHeight - 5) {
-            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+        const latestHeight = document.documentElement.scrollHeight;
+        // 如果没到底，再补一次
+        if (latestHeight - currentPos > 20) {
+            window.scrollTo({ top: latestHeight, behavior: "smooth" });
         }
     };
 
-    // 延迟检查，防止单次平滑滚动未完成
-    setTimeout(checkScrollEnd, 800);
+    setTimeout(checkScrollEnd, 700);
 };
 
 const handleScroll = () => {
-    // 检查评论区容器是否存在，不存在则隐藏按钮
     const el = document.getElementById(props.targetId);
     if (!el) {
         showDiscuss.value = false;
@@ -57,7 +65,7 @@ const handleScroll = () => {
     const { scrollY, innerHeight } = window;
     const { scrollHeight } = document.documentElement;
 
-    // 接近底部 350px 时隐藏，避免挡住评论输入框
+    // 接近底部 350px 时隐藏，避免挡住输入框
     const atBottom = (scrollY + innerHeight) > (scrollHeight - 350);
 
     showDiscuss.value = scrollY > 100 && !atBottom;
@@ -90,6 +98,7 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+/* 还原到你最初定义的坐标和尺寸 */
 .discuss-btn-container {
     position: fixed;
     bottom: 90px;
@@ -120,6 +129,7 @@ onBeforeUnmount(() => {
 
 .discuss-main:hover {
     background-color: #059669;
+    /* 悬停微调，保持你原有的 translate 逻辑 */
     transform: translate(-50%, -60%);
     box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
 }
